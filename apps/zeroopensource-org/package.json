@@ -7,7 +7,7 @@
   "homepage": "https://zeroopensource.org",
   "repository": "https://github.com/zeroopensource/zero-zeroopensource-org",
   "scripts": {
-    "build": "pnpm fix:copy-readme && pnpm build:registry && next build && pnpm fix:next-out",
+    "build": "pnpm fix:copy-readme && next build && pnpm fix:next-out",
     "dev": "pnpm build && next dev",
     "start": "next start",
     "types:check": "fumadocs-mdx && tsc --noEmit",
@@ -17,7 +17,6 @@
     "fix:copy-readme": "tsx scripts/copy-readme.ts",
     "shadcn": "shadcn",
     "shadcn:addZero": "pnpm shadcn add https://zerocn.zeroopensource.org/r/all.json",
-    "build:registry": "shadcn build",
     "next": "next"
   },
   "dependencies": {
