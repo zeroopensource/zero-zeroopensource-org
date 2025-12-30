@@ -6,9 +6,6 @@
   "pages": [
     "---General---",
     "index",
-    "projects",
-    "---Components---",
-    "official-links",
-    "contact-us"
+    "projects"
   ]
 }
