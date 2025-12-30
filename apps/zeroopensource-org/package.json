@@ -5,7 +5,7 @@
   "description": "Main website for Zero Open Source™ (aka ZeroOpenSource™; “Zero”)",
   "private": true,
   "homepage": "https://zeroopensource.org",
-  "repository": "https://github.com/zeroopensource/zero-zeroopensource-org",
+  "repository": "https://github.com/zeroopensource",
   "scripts": {
     "build": "pnpm fix:copy-readme && next build && pnpm fix:next-out",
     "dev": "pnpm build && next dev",
