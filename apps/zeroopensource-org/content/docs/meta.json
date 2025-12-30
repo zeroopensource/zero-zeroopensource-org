@@ -1,0 +1,14 @@
+{
+  "title": "Framework",
+  "description": "The docs framework",
+  "icon": "Building",
+  "root": true,
+  "pages": [
+    "---General---",
+    "index",
+    "projects",
+    "---Components---",
+    "official-links",
+    "contact-us"
+  ]
+}
