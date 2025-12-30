@@ -6,11 +6,9 @@
   "pages": [
     "---General---",
     "index",
-    "workspace",
-    "docs",
+    "projects",
     "---Components---",
-    "lib",
-    "file",
-    "zero"
+    "official-links",
+    "contact-us"
   ]
 }

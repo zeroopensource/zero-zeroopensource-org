@@ -1,7 +1,7 @@
 {
-  "name": "zeroopensource-org",
+  "name": "zero-zeroopensource-org",
   "version": "1.0.0",
-  "shortName": "ZeroOpenSourceOrg",
+  "shortName": "ZeroOpenSource",
   "description": "Main website for Zero Open Source™ (aka ZeroOpenSource™; “Zero”)",
   "private": true,
   "homepage": "https://zeroopensource.org",
