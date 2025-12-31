@@ -40,8 +40,5 @@ If you find our work valuable, consider supporting us:
 - ⭐ **GitHub Sponsors**  
   https://github.com/sponsors/zeroopensource
 
-- ❤️ **Ko-fi**  
-  https://ko-fi.com/zeroopensource
-
 - ☕ **Buy Me a Coffee**  
   https://buymeacoffee.com/zeroopensource
