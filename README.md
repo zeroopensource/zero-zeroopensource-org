@@ -37,6 +37,9 @@ Stay connected with **Zero Open Source** across our official platforms:
 
 If you find our work valuable, consider supporting us:
 
+- ⭐ **GitHub Sponsors**  
+  https://github.com/sponsors/zeroopensource
+
 - ❤️ **Ko-fi**  
   https://ko-fi.com/zeroopensource
 
