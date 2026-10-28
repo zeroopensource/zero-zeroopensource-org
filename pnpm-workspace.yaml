@@ -3,18 +3,6 @@ packages:
   - packages/*
 
 allowBuilds:
-  esbuild: set this to true or false
-  msw: set this to true or false
-  unrs-resolver: set this to true or false
-
-onlyBuiltDependencies:
-  - '@prisma/client'
-  - '@prisma/engines'
-  - '@tailwindcss/oxide'
-  - better-sqlite3
-  - esbuild
-  - msw
-  - prisma
-  - protobufjs
-  - sharp
-  - unrs-resolver
+  esbuild: true
+  msw: true
+  unrs-resolver: true
