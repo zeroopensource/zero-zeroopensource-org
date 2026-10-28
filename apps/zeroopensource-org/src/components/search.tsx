@@ -1,6 +1,6 @@
 "use client";
-import { create } from "@orama/orama";
 import { useDocsSearch } from "fumadocs-core/search/client";
+import { staticClient } from "fumadocs-core/search/client/orama-static";
 import {
   SearchDialog,
   SearchDialogClose,
@@ -18,22 +18,19 @@ import {
 import { useI18n } from "fumadocs-ui/contexts/i18n";
 import { useState } from "react";
 
-function initOrama() {
-  return create({
-    schema: { _: "string" },
-    // https://docs.orama.com/docs/orama-js/supported-languages
-    language: "english",
-  });
-}
-
 export default function DefaultSearchDialog(props: SharedProps) {
-  const [tag, setTag] = useState<string | undefined>();
-  const { locale } = useI18n(); // (optional) for i18n
+  const tags = [
+    { value: "all", label: "Search all tags" },
+    { value: "archived", label: "archived" },
+  ];
+  const defaultTagValue = tags[0].value;
+  const [tag, setTag] = useState<string | undefined>(defaultTagValue);
+  const { locale } = useI18n();
   const { search, setSearch, query } = useDocsSearch({
-    type: "static",
-    initOrama,
-    locale,
-    tag,
+    client: staticClient({
+      locale,
+      tag: tag === "all" ? undefined : tag,
+    }),
   });
 
   return (
@@ -50,10 +47,14 @@ export default function DefaultSearchDialog(props: SharedProps) {
           <SearchDialogInput />
           <SearchDialogClose />
         </SearchDialogHeader>
-        <SearchDialogList items={query.data !== "empty" ? query.data : null} />
+        <SearchDialogList items={query.data === "empty" ? null : query.data} />
         <SearchDialogFooter className="flex flex-row">
           <TagsList onTagChange={setTag} tag={tag}>
-            <TagsListItem value="my-value">My Value</TagsListItem>
+            {tags.map((t) => (
+              <TagsListItem key={t.value} value={t.value}>
+                {t.label}
+              </TagsListItem>
+            ))}
           </TagsList>
         </SearchDialogFooter>
       </SearchDialogContent>
