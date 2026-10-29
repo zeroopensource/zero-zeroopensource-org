@@ -23,7 +23,7 @@
       "@/root/*": ["./*"],
       "@/src/*": ["./src/*"],
       "@/shadcn/*": ["./src/shadcn/*"]
-    }
+    },
   },
   "include": [
     "next-env.d.ts",
